@@ -1,5 +1,5 @@
 #ifndef _VECTOR2D_H_
-#define _VECYOR2D_H_
+#define _VECTOR2D_H_
 
 //  2次元ベクトルクラス
 class Vector2D{

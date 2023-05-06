@@ -8,7 +8,7 @@ void Vector2D::setValue(int x, int y){
   m_x = x;
   m_y = y;
 }
-int  Vector2D::getX(){
+int Vector2D::getX(){
   return m_x;
 }
 int Vector2D::getY(){

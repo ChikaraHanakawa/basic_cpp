@@ -2,6 +2,7 @@
 #define _POSITION2D_H_
 
 #include "Vector2D.h"
+#include "Vector2D.cpp"
 
 class Position2D : public Vector2D{
   public:
