@@ -1,5 +1,5 @@
 #include <iostream>
-#include "calc.h"
+#include "calc.cpp"
 
 int main(){
   CCalc *pC1, *pC2;
