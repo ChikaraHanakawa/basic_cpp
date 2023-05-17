@@ -35,3 +35,35 @@ void CollectionInt::showArray(){
   }
   std::cout << std::endl;
 }
+collection::collection(C* array, C length){
+  n_array = new C[array];
+  n_length = length;
+  for(int i = 0; i < n_length; i++){
+    n_array[i] << array[i];
+  }
+}
+collection::~collection(){
+  delete[] n_array;
+}
+collection::n_getMax(){
+  int max = n_array[0];
+  for(int i = 0;i < n_length;i++){
+    if(max < m_array[i]){
+      max = n_array[i];
+    }
+  }
+}
+collection::n_getMin(){
+  int min = n_array[0];
+  for(int i = 0;i < n_length;i++){
+    if(min > n_array[i]){
+      min = n_array[i];
+    }
+  }
+}
+collection::n_showArray(){
+  for(int i = 0;i < n_length;i++){
+    std::cout << n_array[i] << std::endl;
+  }
+  std::cout << std::endl;
+}
