@@ -3,7 +3,11 @@
 
 int main(){
   double array[] = {1.2,3.5,8.1,4.9,2.0,2.2};
-  collection<int> i1;
-  collection<double> i2;
-  collection c = new collection(array, 5);
+  collection* c;
+  c = new collection(array, 5);
+  c -> showArray();
+  std::cout << "最大値 : " << c->getMax() << std::endl;
+  std::cout << "最小値 : " << c->getMin() << std::endl;
+  delete c;
+  return 0;
 }
