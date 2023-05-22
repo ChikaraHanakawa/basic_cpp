@@ -1,9 +1,9 @@
 #include <iostream>
-#include "collectionint.h"
+#include "collection.h"
 
 template<typename T>
-collection<T>::collection(const T num1,const T num2){
-  n_array = new T[num2];
+collection<T>::collection( T num1,int num2){
+  n_array = new int[num2];
   n_length = num2;
   for(int i = 0;i < n_length;i++){
     n_array[i] = num1[i];
@@ -14,12 +14,13 @@ collection<T>::~collection(){
 }
 template<typename T>
 T collection<T>::getMax(){
-  int max = n_array[0];
+  T max = n_array[0];
   for(int i = 0;i < n_length; i++){
     if(max < n_array[i]){
       max = n_array[i];
     }
   }
+  return max;
 }
 template<typename T>
 T collection<T>::getMin(){
@@ -29,10 +30,10 @@ T collection<T>::getMin(){
       min = n_array[i];
     }
   }
-  return 0;
+  return min;
 }
 template<typename T>
-T collection<T>::showArray(){
+void collection<T>::showArray(){
   for(int i = 0;i < n_length;i++){
     std::cout << n_array[i] << " ";
   }
