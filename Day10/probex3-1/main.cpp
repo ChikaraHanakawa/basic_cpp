@@ -15,3 +15,22 @@ int main(){
   std::cout << max("aiu", "eo") << std::endl;
   return 0;
 }
+
+int maxI(int a, int b){
+  if(a > b){
+    return a;
+  }
+  return b;
+}
+double max(double a, double b){
+  if(a > b){
+    return a;
+  }
+  return b;
+}
+std::string max(std::string a, std::string b){
+  if(a > b){
+    return a;
+  }
+  return b;
+}
