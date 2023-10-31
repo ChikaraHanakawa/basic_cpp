@@ -6,7 +6,8 @@ template <typename T> class Collection{
         T* m_pArray;
         T m_length;
     public:
-        Collection(T* array, T length);
+        //Collection(T* array, T length);
+        Collection(T* array);
         ~Collection();
         T getMax();
         T getMin();
