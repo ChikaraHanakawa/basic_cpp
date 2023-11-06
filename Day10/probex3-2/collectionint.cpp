@@ -1,7 +1,6 @@
 #include "collectionint.h"
 #include <iostream>
 
-//template <typename T>Collection<T>::Collection(T* array, T length){
 template <typename T>Collection<T>::Collection(T* array){
     m_pArray = new T[5];
     m_length = 5;
