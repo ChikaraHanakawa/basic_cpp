@@ -12,7 +12,7 @@ int main(){
     std::cout << "英語で動物の名前を入力して下さい : ";
     std::cin >> input;
     if(jisho.count(input) != 0){
-        std::cout << jisho[input] << std::endl;
+        std::cout << "「" << jisho[input] << "」です。" << std::endl;
     }else{
         std::cout << "対応するデータは登録されていません" << std::endl;
     }
