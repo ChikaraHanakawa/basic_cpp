@@ -4,6 +4,13 @@
 #include <stack>
 #include <vector>
 
+bool isInteger(const std::string &s){
+    if(s.empty() || ((!isdigit(s[0])) && (s[0] != '-') && (s[0] != '+'))) return false;
+    char * p;
+    strtol(s.c_str(), &p, 10);
+    return (*p == 0);
+}
+
 int main(){
     std::string input;
     std::stack<std::string> sta;
@@ -23,6 +30,11 @@ int main(){
 
     std::cout << "整数の値を入力して下さい:";
     std::cin >> input;
+
+    if(!isInteger(input)){
+        std::cout << "整数の値を入力して下さい" << std::endl;
+        return 0;
+    }
 
     for(int i = 0; i < input.size(); i++){
         sta.push(word_number[input[i]]);
