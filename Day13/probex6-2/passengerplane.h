@@ -3,15 +3,16 @@
 
 #include <iostream>
 #include <string>
+#include "airplane.h"
 
-class PassengerPlane{
+class PassengerPlane : public Airplane{
     private:
-        std:::string m_type;
+        std::string m_type;
     public:
         PassengerPlane();
         std::string getType();
         void fly();
-        void carryPassengers();
+        void action();
 };
 
 #endif // _PASSENGERPLANE_H_

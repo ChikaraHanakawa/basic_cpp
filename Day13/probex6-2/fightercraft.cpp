@@ -1,6 +1,6 @@
 #include "fighteraircraft.h"
 
-FighterAircraft::FighterAircraft(){
+FighterAircraft::FighterAircraft() : Airplane(){
     m_type = "戦闘機";
 }
 std::string FighterAircraft::getType(){
@@ -9,6 +9,6 @@ std::string FighterAircraft::getType(){
 void FighterAircraft::fly(){
     std::cout << "攻撃に出るために飛行" << std::endl;
 }
-void FighterAircraft::fight(){
+void FighterAircraft::action(){
     std::cout << "戦闘します" << std::endl;
 }

@@ -1,14 +1,17 @@
 #include <iostream>
+#include "airplane.h"
 #include "fighteraircraft.h"
-#include "passengerplane.h"
+ #include "passengerplane.h"
 
 int main(){
-    FighterAircraft* fighter = new FighterAircraft();
-    PassengerPlane* passenger = new PassengerPlane();
+    Airplane* fighter, *airlinear;
+    fighter = new FighterAircraft();
+    airlinear = new PassengerPlane();
+    
     fighter->fly();
-    fighter->fight();
+    fighter->action();
     airlinear->fly();
-    airlinear->carryPassengers();
+    airlinear->action();
     delete fighter;
     delete airlinear;
 }

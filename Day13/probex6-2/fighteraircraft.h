@@ -3,15 +3,16 @@
 
 #include <iostream>
 #include <string>
+#include "airplane.h"
 
-class FighterAircraft{
+class FighterAircraft : public Airplane{
     private:
         std::string m_type;
     public:
         FighterAircraft();
         std::string getType();
         void fly();
-        void fight();
+        void action();
 };
 
 #endif // _FIGHTERAIRCRAFT_H_
