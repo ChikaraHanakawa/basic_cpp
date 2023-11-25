@@ -4,14 +4,14 @@
  #include "passengerplane.h"
 
 int main(){
-    Airplane* fighter, *airlinear;
+    AirPlane* fighter, *airlinear;
     fighter = new FighterAircraft();
     airlinear = new PassengerPlane();
     
     fighter->fly();
-    fighter->action();
+    fighter->fight();
     airlinear->fly();
-    airlinear->action();
+    airlinear->carryPassenger();
     delete fighter;
     delete airlinear;
 }

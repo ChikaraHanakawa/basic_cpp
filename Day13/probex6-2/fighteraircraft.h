@@ -5,14 +5,14 @@
 #include <string>
 #include "airplane.h"
 
-class FighterAircraft : public Airplane{
+class FighterAircraft : public AirPlane{
     private:
         std::string m_type;
     public:
         FighterAircraft();
         std::string getType();
         void fly();
-        void action();
+        void fight();
 };
 
 #endif // _FIGHTERAIRCRAFT_H_
