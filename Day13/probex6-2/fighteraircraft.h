@@ -13,6 +13,7 @@ class FighterAircraft : public AirPlane{
         std::string getType();
         void fly();
         void fight();
+        virtual ~FighterAircraft();
 };
 
 #endif // _FIGHTERAIRCRAFT_H_

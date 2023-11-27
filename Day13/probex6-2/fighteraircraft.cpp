@@ -12,3 +12,5 @@ void FighterAircraft::fly(){
 void FighterAircraft::fight(){
     std::cout << "戦闘します" << std::endl;
 }
+FighterAircraft::~FighterAircraft(){
+}

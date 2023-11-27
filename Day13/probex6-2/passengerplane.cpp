@@ -13,3 +13,6 @@ void PassengerPlane::fly(){
 void PassengerPlane::carryPassenger(){
     std::cout << "乗客を運びます" << std::endl;
 }
+
+PassengerPlane::~PassengerPlane(){
+}

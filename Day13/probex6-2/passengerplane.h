@@ -13,6 +13,7 @@ class PassengerPlane : public AirPlane{
         std::string getType();
         void fly();
         void carryPassenger();
+        virtual ~PassengerPlane();
 };
 
 #endif // _PASSENGERPLANE_H_
