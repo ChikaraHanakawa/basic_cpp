@@ -10,9 +10,15 @@ class BaseballPlayer{
         std::string  m_kind;
         std::string m_name;
     public:
-        int getNumber();
-        std::string getKind();
-        std::string getName();
+        int getNumber(){
+            return  m_number;
+        }
+        std::string getKind(){
+            return m_kind;
+        }
+        std::string getName(){
+            return m_name;
+        }
         virtual void play() = 0;
 };
 
