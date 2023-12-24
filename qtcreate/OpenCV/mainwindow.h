@@ -28,8 +28,6 @@ private slots:
 
 private:
     QTimer *timer;
-    cv::VideoCaputure cap;
-    cv::Mat frame, dst;
     QImage qtImage;
 };
 #endif // MAINWINDOW_H

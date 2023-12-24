@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     timer = new QTimer(this);
 
+    cap = cv::VideoCapture(0);
     cap.open(0);
     if(!cap.isOpened()){
         QMessageBox msgBox(this);
@@ -37,6 +38,8 @@ MainWindow::~MainWindow()
 }
 
 void MinWindow::updateWindow(){
+    cv::VideoCapture cap;
+    cv::Mat frame, dst;
     cap >> frame;
     cv::cvtColor(frame, dst, cv::COLOR_BGR2RGB);
 

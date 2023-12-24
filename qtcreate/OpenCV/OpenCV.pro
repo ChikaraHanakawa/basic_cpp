@@ -89,3 +89,9 @@ unix:!macx: LIBS += \
 -lopencv_ximgproc \
 -lopencv_xobjdetect \
 -lopencv_xphoto
+DEPENDPATH += /opt/local/include
+INCLUDEPATH += /opt/local/include
+LIBS += -L/opt/local/lib/ \
+     -lopencv_core \
+     -lopencv_imgproc \
+     -lopencv_highgui
