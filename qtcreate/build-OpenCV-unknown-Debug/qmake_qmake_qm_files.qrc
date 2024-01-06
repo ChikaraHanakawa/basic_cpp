@@ -1,0 +1,5 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="i18n">
+<file alias="OpenCV_ja_JP.qm">/home/chikara/c++/basic_cpp/qtcreate/build-OpenCV-unknown-Debug/.qm/OpenCV_ja_JP.qm</file>
+</qresource>
+</RCC>

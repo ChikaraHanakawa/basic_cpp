@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "opencv2/opencv.hpp"
 #include "opencv2/imgproc/types_c.h"
 
 MainWindow::MainWindow(QWidget *parent)
@@ -37,12 +36,16 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MinWindow::updateWindow(){
-    cv::VideoCapture cap;
-    cv::Mat frame, dst;
+void MainWindow::updateWindow(){
     cap >> frame;
     cv::cvtColor(frame, dst, cv::COLOR_BGR2RGB);
 
     qtImage = QImage((const unsigned char*) (dst.data), dst.cols, dst.rows, QImage::Format_RGB888);
     ui->label->setPixmap(QPixmap::fromImage(qtImage));
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    cv::imwrite("frame.jpg", frame);
+    ui->label->setText(ui->lineEdit->text());
 }

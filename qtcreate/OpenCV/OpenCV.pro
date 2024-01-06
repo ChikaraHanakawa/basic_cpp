@@ -27,17 +27,18 @@ FORMS += \
 
 TRANSLATIONS += \
     OpenCV_ja_JP.ts
+CONFIG += lrelease
+CONFIG += embed_translations
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-INCLUDEPATH += "/usr/include/opencv4"
-DEPENDPATH += "/usr/include/opencv4"
+INCLUDEPATH += /usr/include/opencv4
+DEPENDPATH += /usr/include/opencv4
 
 unix:!macx: LIBS += \
--lopencv_alphamat \
 -lopencv_aruco \
 -lopencv_bgsegm \
 -lopencv_bioinspired \
@@ -60,9 +61,7 @@ unix:!macx: LIBS += \
 -lopencv_img_hash \
 -lopencv_imgcodecs \
 -lopencv_imgproc \
--lopencv_intensity_transform \
 -lopencv_line_descriptor \
--lopencv_mcc \
 -lopencv_ml \
 -lopencv_objdetect \
 -lopencv_optflow \
@@ -70,7 +69,6 @@ unix:!macx: LIBS += \
 -lopencv_photo \
 -lopencv_plot \
 -lopencv_quality \
--lopencv_rapid \
 -lopencv_reg \
 -lopencv_rgbd \
 -lopencv_saliency \
@@ -89,9 +87,3 @@ unix:!macx: LIBS += \
 -lopencv_ximgproc \
 -lopencv_xobjdetect \
 -lopencv_xphoto
-DEPENDPATH += /opt/local/include
-INCLUDEPATH += /opt/local/include
-LIBS += -L/opt/local/lib/ \
-     -lopencv_core \
-     -lopencv_imgproc \
-     -lopencv_highgui
