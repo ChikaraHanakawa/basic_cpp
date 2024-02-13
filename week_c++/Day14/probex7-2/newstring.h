@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <algorithm>
 
 class NewString{
     private:
@@ -10,9 +11,10 @@ class NewString{
     public:
         NewString();
         NewString(std::string value);
-        NewString(NewString& value);
-        NewString& operator=(NewString& n);
-        std::string getValue();
+        NewString(const NewString& value);
+        NewString& operator=(const NewString& n);
+        std::string getValue() const;
+        bool operator==(const NewString& n);
 };
 
 #endif // _NEWSTRING_H_

@@ -11,5 +11,11 @@ int main(){
     std::cout << s3.getValue() << std::endl;
     NewString s4("HELLO WORLD");
     std::cout << s4.getValue() << std::endl;
+    if(s1 == s2){
+        std::cout << "s1==s2" << std::endl;
+    }
+    if(s1 == s4){
+        std::cout << "s1==s4" << std::endl;
+    }
     return 0;
 }
