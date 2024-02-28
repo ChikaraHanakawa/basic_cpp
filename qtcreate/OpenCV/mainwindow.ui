@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>930</width>
+    <width>900</width>
     <height>640</height>
    </rect>
   </property>
@@ -41,8 +41,8 @@ QLabel{
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>120</y>
+      <x>40</x>
+      <y>90</y>
       <width>89</width>
       <height>25</height>
      </rect>
@@ -57,16 +57,14 @@ QLabel{
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>930</width>
+     <width>900</width>
      <height>28</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menumainwindow">
-    <property name="title">
-     <string>Insta</string>
-    </property>
-   </widget>
+   <widget class="QMenu" name="menumainwindow"/>
+   <widget class="QMenu" name="menukka"/>
    <addaction name="menumainwindow"/>
+   <addaction name="menukka"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

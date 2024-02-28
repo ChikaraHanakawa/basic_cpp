@@ -30,13 +30,14 @@ public:
     QPushButton *pushButton;
     QMenuBar *menubar;
     QMenu *menumainwindow;
+    QMenu *menukka;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(930, 640);
+        MainWindow->resize(900, 640);
         MainWindow->setStyleSheet(QString::fromUtf8("QMainWindow{\n"
 "		background-color: rgb(186, 189, 182);\n"
 "}\n"
@@ -51,19 +52,22 @@ public:
         label->setStyleSheet(QString::fromUtf8(""));
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(60, 120, 89, 25));
+        pushButton->setGeometry(QRect(40, 90, 89, 25));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 930, 28));
+        menubar->setGeometry(QRect(0, 0, 900, 28));
         menumainwindow = new QMenu(menubar);
         menumainwindow->setObjectName(QString::fromUtf8("menumainwindow"));
+        menukka = new QMenu(menubar);
+        menukka->setObjectName(QString::fromUtf8("menukka"));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
 
         menubar->addAction(menumainwindow->menuAction());
+        menubar->addAction(menukka->menuAction());
 
         retranslateUi(MainWindow);
 
@@ -75,7 +79,6 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
         label->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
         pushButton->setText(QApplication::translate("MainWindow", "SavePicture", nullptr));
-        menumainwindow->setTitle(QApplication::translate("MainWindow", "Insta", nullptr));
     } // retranslateUi
 
 };

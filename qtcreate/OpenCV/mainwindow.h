@@ -8,6 +8,7 @@
 #include <opencv2/highgui.hpp>
 #include <opencv2/imgproc.hpp>
 #include <opencv2/alphamat.hpp>
+#include <QMutex>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -29,7 +30,7 @@ private slots:
     void updateWindow();
 
 private:
-    cv::Mat frame, dst;
+    cv::Mat frame, dst, color_frame;
     cv::VideoCapture cap;
     QTimer *timer;
     QImage qtImage;

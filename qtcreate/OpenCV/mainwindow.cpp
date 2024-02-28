@@ -2,6 +2,8 @@
 #include "ui_mainwindow.h"
 #include "opencv2/imgproc/types_c.h"
 
+QMutex mutex;
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -44,8 +46,10 @@ void MainWindow::updateWindow(){
     ui->label->setPixmap(QPixmap::fromImage(qtImage));
 }
 
-void MainWindow::on_pushButton_clicked()
+/*void MainWindow::on_pushButton_clicked()
 {
-    cv::imwrite("frame.jpg", frame);
-    ui->label->setText(ui->lineEdit->text());
-}
+    mutex.lock();
+    cv::Mat frame_copy = frame.clone();
+    cv::imwrite("frame.jpg", frame_copy);
+    mutex.unlock();
+}*/
