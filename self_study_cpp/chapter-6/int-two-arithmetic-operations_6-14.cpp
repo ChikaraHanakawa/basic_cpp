@@ -15,9 +15,9 @@ class Integer{
         void show() const;
 };
 
-Integer operator+(const Integer& Ihs, int rhs){
+Integer operator+(const Integer& lhs, int rhs){
     //フレンド関数だからprivateメンバーにアクセスできる
-    return Integer(Ihs.value + rhs);
+    return Integer(lhs.value + rhs);
 }
 Integer operator+(int lhs, const Integer& rhs){
     return Integer(lhs + rhs.value);
