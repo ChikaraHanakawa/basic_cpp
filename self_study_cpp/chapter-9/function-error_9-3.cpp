@@ -14,7 +14,7 @@ class Integer{
             return Integer{lhs + rhs};
         }
     friend Integer operator-(Integer lhs, Integer rhs){
-        return Integer{lhs - rhs}
+        return Integer{lhs - rhs};
     }
 
     int get_value() const{
@@ -23,5 +23,6 @@ class Integer{
 };
 
 int main(){
+    // 関数テンプレートをInteger型で実体化して呼び出そうとするが，乗算演算子が定義されていないためエラー
     std::cout << fused_multiply_add<Integer>(1, 2, 3).get_value() << std::endl;
 }
