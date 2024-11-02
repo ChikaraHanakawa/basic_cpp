@@ -2,6 +2,7 @@
 
 class Base{
     public:
+        // この仮想関数の型と同じクラステンプレートの型でないとオーバーライドできない
         virtual void foo(int i){
             std::cout << "Base::foo()" << std::endl;
         }
